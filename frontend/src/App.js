@@ -6,7 +6,7 @@ import UsersList from './components/Users.js'
 
 const Header = () => (
     <h3 className="header">
-        Пользователи
+        Проект TO DO
     </h3>
 );
 
@@ -14,6 +14,15 @@ const Footer = () => (
     <footer className="footer">
         <p>GeekBrains 2021</p>
     </footer>
+);
+
+const Menu = () => (
+    <ul id="navbar">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Пользователи</a></li>
+      <li><a href="#">Список дел</a></li>
+      <li><a href="#">О нас</a></li>
+    </ul>
 );
 
 
@@ -62,7 +71,9 @@ class App extends React.Component {
         return (
             <div className="body">
                 <Header/>
+                <Menu/>
                 <div className="main">
+                    <h3 className="table_name">Пользователи</h3>
                     <UsersList users={this.state.users}/>
                 </div>
                 <Footer/>

@@ -49,10 +49,11 @@
     min-height: 100vh;
 }
 
-.header{
+.header {
     /*max-width: 800px;*/
     margin: 0 auto;
-    padding: 10px 45%;
+    text-align: center;
+    padding: 10px;
     background-color: #93a190;
     width: 100%;
     /*flex-grow: 1;*/
@@ -61,7 +62,7 @@
 .main {
     /*max-width: 800px;*/
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 20px;
     /*min-height: 100vh;*/
     flex-grow: 1;
     /*table-border-color-dark: black;*/
@@ -77,17 +78,49 @@
     /*margin-top: auto;*/
 
 
-
 }
 
 table {
-   border-collapse: collapse;
-   /*убираем пустые промежутки между ячейками*/
-   border: 1px solid grey;
-   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    border-collapse: collapse;
+    /*убираем пустые промежутки между ячейками*/
+    border: 1px solid grey;
+    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
 }
 
 th, td {
-   border: 1px solid grey;
+    border: 1px solid grey;
     padding: 10px 15px;
+}
+
+#navbar {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    /*border: 2px solid #474849;*/
+    /*border-radius: 20px 5px;*/
+    width: 100%;
+    text-align: center;
+    background-color: #93a190;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: #000000;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+
+#navbar a:hover {
+    border-radius: 15px 15px;
+    background-color: #656e65;
+}
+
+.table_name {
+    text-align: center;
 }
