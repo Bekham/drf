@@ -3,18 +3,20 @@ import logo from './logo.svg';
 import axios from "axios";
 import './App.css';
 import UsersList from './components/Users.js'
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-const Header = () => (
-    <h3 className="header">
-        Проект TO DO
-    </h3>
-);
+// const Header = () => (
+//     <h3 className="header">
+//         Проект TO DO
+//     </h3>
+// );
 
-const Footer = () => (
-    <footer className="footer">
-        <p>GeekBrains 2021</p>
-    </footer>
-);
+// const Footer = () => (
+//     <footer className="footer">
+//         <p>GeekBrains 2021</p>
+//     </footer>
+// );
 
 const Menu = () => (
     <ul id="navbar">
