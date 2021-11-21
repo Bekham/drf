@@ -20,11 +20,13 @@ class TODOModelSerializer(HyperlinkedModelSerializer):
     user = HyperlinkedRelatedField(many=False,
                                     read_only=False,
                                     queryset=User.objects.all(),
-                                    view_name='user-detail')
+                                    view_name='user-detail'
+                                  )
     project_name = HyperlinkedRelatedField(many=False,
                                     read_only=False,
                                     queryset=Project.objects.all(),
-                                    view_name='project-detail')
+                                    view_name='project-detail'
+                                          )
 
     class Meta:
         model = TODO
