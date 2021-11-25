@@ -14,7 +14,7 @@ class Project(models.Model):
 
 
 class TODO(models.Model):
-    project_name = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project_name = models.ForeignKey(Project, related_name='todo', on_delete=models.CASCADE)
     text = models.TextField()
     created_timestamp = models.DateTimeField(auto_now_add=True)
     update_timestamp = models.DateTimeField(auto_now=True)
