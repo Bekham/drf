@@ -18,14 +18,14 @@ class ProjectModelViewSet(ModelViewSet):
 
    queryset = Project.objects.all()
    serializer_class = ProjectModelSerializer
-   pagination_class = ProjectLimitOffsetPagination
+   # pagination_class = ProjectLimitOffsetPagination
    filterset_class = ProjectFilter
 
 
 class TODOModelViewSet(ModelViewSet):
    queryset = TODO.objects.all()
    serializer_class = TODOModelSerializer
-   pagination_class = TODOLimitOffsetPagination
+   # pagination_class = TODOLimitOffsetPagination
    filterset_fields = ['project_name__project_name']
 
    def perform_destroy(self, instance):
