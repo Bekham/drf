@@ -109,11 +109,11 @@ th, td {
 
 #navbar a {
     color: #000000;
-    padding: 10px 50px;
+    padding: 10px 10px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    width: 300px;
+    width: 20%;
 }
 
 #navbar a:hover {
@@ -123,4 +123,8 @@ th, td {
 
 .table_name {
     text-align: center;
+}
+
+.login_name {
+    font-weight: bold;
 }
