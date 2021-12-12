@@ -116,7 +116,8 @@ class App extends React.Component {
 
     get_headers() {
         let headers = {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json, version=v2'
         }
 
         if (this.is_auth()) {

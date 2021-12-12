@@ -7,14 +7,14 @@ from users.models import User
 from users.serializers import UserModelSerializer
 
 
-class ProjectModelSerializer(ModelSerializer):
-    users = PrimaryKeyRelatedField(
-        queryset=User.objects.all(),
-        many=True,
-        required=True
-    )
+class ProjectModelSerializer(HyperlinkedModelSerializer):
+    # users = PrimaryKeyRelatedField(
+    #     queryset=User.objects.all(),
+    #     many=True,
+    #     required=True
+    # )
 
-    # users = SlugRelatedField(many=True, read_only=False, queryset=User.objects.all(), slug_field='username')
+    users = SlugRelatedField(many=True, read_only=False, queryset=User.objects.all(), slug_field='username')
 
     class Meta:
         model = Project
@@ -27,10 +27,10 @@ class ProjectNameSerializer(ModelSerializer):
         fields = ['project_name']
 
 
-class TODOModelSerializer(ModelSerializer):
+class TODOModelSerializer(HyperlinkedModelSerializer):
 
-    # project_name = ProjectNameSerializer(many=False, read_only=True)
-    # user = SlugRelatedField(many=False, read_only=False, queryset=User.objects.all(), slug_field='username')
+    project_name = ProjectNameSerializer(many=False, read_only=True)
+    user = SlugRelatedField(many=False, read_only=False, queryset=User.objects.all(), slug_field='username')
 
     class Meta:
         model = TODO
