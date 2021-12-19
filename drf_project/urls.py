@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+from django.views.generic import TemplateView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from graphene_django.views import GraphQLView
@@ -47,6 +48,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token),
+    path('', TemplateView.as_view(template_name='index.html')),
     # path('api/<str:version>/users/', UserModelViewSet.as_view()),
     # path('api/users/v1', include('users.urls', namespace='v1')),
     # path('api/users/v2', include('users.urls', namespace='v2')),
