@@ -1,0 +1,11 @@
+sudo docker ps -a
+docker-compose up -d --build
+docker-compose down
+psql --host=127.0.0.1 --port=5432 --username=admin --dbname=db
+docker-compose rm -f -s -v yourService
+docker-compose up -d --build nginx
+sudo netstat -lntup | grep ":22"
+sudo netstat -ap | grep :
+df -h
+docker image ls -a
+docker rmi -f $(docker image ls -a -q)
